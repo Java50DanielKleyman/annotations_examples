@@ -17,13 +17,13 @@ public class TestLibrary {
 			}
 		}
 	}
-
 	
 	private static Method getBeforeEachMethod(Method[] methods) {
 		Method beforeEachMethod = null;
 		for (Method method : methods) {
 			if (method.isAnnotationPresent(BeforeEach.class)) {
-				method.setAccessible(true);
+				beforeEachMethod = method;
+				beforeEachMethod.setAccessible(true);
 				break;
 			}
 		}
