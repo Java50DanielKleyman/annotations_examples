@@ -11,7 +11,7 @@ public class TestLibrary {
 		Method beforeEachMethod = getBeforeEachMethod(methods);
 		for (Method method : methods) {
 			if (method.isAnnotationPresent(Test.class)) {
-				
+				beforeEachMethod.invoke(testObj);
 				method.setAccessible(true);
 				method.invoke(testObj);
 			}
