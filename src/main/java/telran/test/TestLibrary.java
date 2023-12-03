@@ -18,6 +18,7 @@ public class TestLibrary {
 		}
 	}
 
+	
 	private static Method getBeforeEachMethod(Method[] methods) {
 		Method beforeEachMethod = null;
 		for (Method method : methods) {
